@@ -1,10 +1,7 @@
 package com.example.controller;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by root on 2017/7/27.
@@ -19,14 +16,18 @@ public class TestController {
         return "welcome" + id;
     }
 
-    @GetMapping(value="/test")
-    public String test() {
-//        request.setAttribute("test", "a");
-        return "error";
+    @RequestMapping("/tes")
+    public String tes() {
+        return "error2";
     }
 
     @RequestMapping("/")
     public String index() {
+        return "index";
+    }
+
+    @RequestMapping("/in")
+    public String index2() {
         return "index";
     }
 }
